@@ -1,0 +1,163 @@
+/*A estrutura do css é composta: pela identificação do elemento seguido de chaves, e por fim dentro das chaves você escolhe o atributo que deseja modificar seguido do parâmetro. Ex: 
+p{font-size:16px;
+  color: red;}
+Sempre eu preciso terminar os comandos com ;*/
+/*Medidas Absolutas - ou seja fixas
+    px pixels
+    cm centímetros
+    mm milímetros
+Medidas relativas - ou seja que se ajustam
+  rem - se ajusta de acordo com o tamanho da fonte html
+  %   - relativo ao tamanho do elemento pai / tela
+  */
+.ferias{
+    /*Alterando a largura da imagem*/
+    width: 100% ;/*Ocupa 100% da largura do elemento em que ela está*/
+    /*Alterando a altura da imagem*/
+    max-width: 600px;/*Limite de largura*/
+    height: auto;/*Manter a proporção*/
+    border-radius: 12px;/*Bordas arredondadas*/
+    margin: 10px 0px;/*Espaçamento acima e abaixo entre a imagem e o conteúdo*/
+}
+
+/*Aplicou os estilos básicos ao corpo da página*/
+body{
+    background-image: linear-gradient(to bottom,#D5E6F8, #FAF6E2,#FADEC9, #FAD1CD);/*Criamos um gradiente para a página web. Formas de aplicação: right, left, top e bottom*/
+    font-family: Poppins sans-serif;/*Define a fonte padrão*/
+    color: #333;/*Define a cor do texto*/
+    line-height: 1.6;/*Define o espaçamento entre as linhas*/
+    padding: 20px;/*Espaçamento interno nas bordas*/
+}
+/*Estilos do título principal da página*/
+h1{
+    text-align: center;/*Centraliza o texto*/
+    color: #ff6f61;/*Aplica cor laranja*/
+    font-size: 3rem;/*Altera o tamanho*/
+    margin-bottom: 30px;/*Espaçamento externo abaixo do título*/
+}
+/*Estilos para os subtítulos h3 e h4*/
+h3,h4{
+    color: #000796;
+    margin-top: 20px;
+}
+p{
+    font-size: 18px;
+}
+/*Estilizando os links*/
+a{
+    color: #ff5722;/*Cor da letra/fonte*/
+    text-decoration: none;/*Remove o traçado do link*/
+}
+/*Evento hover nos links*/
+a:hover{
+    text-decoration: underline;/*Adiciona um traço abaixo do link quando o mouse estiver sobre ele*/
+}
+/*Estilizar todas as listas (ol, li)
+cor de fundo, espaço interno, arredondar as bordas*/
+ul,ol{
+    font-size: 18px;
+    line-height: 1.6;
+    background-color: #ffffffbb;/*Fundo branco*/ 
+    padding: 30px;/*Espacamento interno*/
+    border-radius: 12px;/*Arredondamento das bordas*/
+}
+/*Estilo da tabela*/
+table{
+    width: 100%;/*Ocupa 100% da largura do elemento ao qual ela está inserida (container)*/
+    border-collapse:collapse;/*Juntar as bordas da tabela*/
+    margin-top: 20px;/*Espaço acima da tabela*/
+}
+table td{
+    border: 1px solid #333;/*Borda de 1 pixel de largura, linha contínua e cor*/
+    /*espaçamento interno, alinhar o texto no centro e atribuir uma cor e fundo*/
+    padding: 12px;/*Espaçamento interno*/
+    text-align: center;/*Alinhar o texto no centro*/
+    background-color: #fafafa; /*Atribui uma cor de fundo*/
+}
+/*Estilizando os cards*/
+.card{
+    background-color: #ffffff;/*Cor de fundo branco*/
+    border-radius: 15px;/*Arredondando as bordas*/
+    margin: 20px auto;/*Espaçamento*/
+    overflow: hidden;/*Ocultar o que passar dos limites de altura e largura do card*/
+    display: inline-block;/*Coloca os cards lado a lado*/
+    vertical-align: top;/*Alinha os cards pelo topo*/
+    height: 500px;/*Define a altura para os cards*/
+    transition: transform 0.3s ease;/*Animação na interação com os cards*/
+}
+.card:hover{
+    transform: scale(1.03);/*Aumenta em 3% o tamanho do card*/
+}
+/*Estilização dos títulos do card*/
+.card-title{
+    font-size: 1.5rem;/*Define tamanho da fonte*/
+    color: #00695c;/*Definir cor da fonte*/
+    margin-bottom: 10px;/*Margem inferior, espaço abaixo do titulo*/
+    margin-left: 10px;/*Margem à esquerda, espaço à esquerda do título*/
+}
+/*Estilizar o parágrafo do card*/
+.card-text{
+    margin-left: 10px;
+    color: #444;
+    font-size: 1.0rem;
+}
+/*Ajustando a imagem*/
+.card-img-top{
+    width: 50%;
+    height: 30%;
+}
+.btn-primary{
+    background-color: #009688;/*cor de fundo*/
+    color: white;/*cor da letra*/
+    padding: 10px 16px;/*espaço interno na horizontal*/
+    border-radius: 8px;/*arredondar as bordas*/
+    text-align: center;/*centralizar o texto*/
+    margin-left: 10px;/*espaço externo entre as bordas do botão e o limite do card*/
+}
+.btn-primary:hover{
+    background-color: #00695c;/*Mudando a cor do botão ao deixar o cursos em cima do elemente*/
+    text-decoration: none;/*retirando traçado do link*/
+}
+/*Responsividade*/
+/*Telas pequenas*/
+@media(max-width:768px){
+    .card{
+        width: 90%;
+        margin: 20px auto;
+    }
+}
+/* Define o layout do menu como horizontal e centralizado */
+.menu-hover {
+    display: flex;            /* Organiza os itens da lista em linha (layout flexível) */
+    gap: 20px;                /* Define o espaçamento entre os itens do menu */
+    list-style: none;         /* Remove os marcadores padrão dos <li> */
+    background-color: #fff;   /* Define a cor de fundo como branca */
+    padding: 10px 20px;       /* Adiciona espaço interno (vertical de 10px, horizontal de 20px) */
+    justify-content: center;  /* Centraliza os itens horizontalmente dentro do menu */
+}
+
+/* Estiliza os links do menu */
+.menu-hover a {
+    text-decoration: none;    /* Remove o sublinhado padrão dos links */
+    color: #333;              /* Define a cor do texto como cinza escuro */
+    position: relative;       /* Necessário para posicionar o pseudo-elemento ::after em relação ao link */
+    padding: 5px;             /* Espaço interno ao redor do texto do link */
+    transition: color 0.3s ease; /* Transição suave na mudança de cor (caso seja adicionada futuramente) */
+}
+
+/* Cria uma linha animada ao passar o mouse (pseudo-elemento ::after) */
+.menu-hover a::after {
+    content: '';              /* Cria um conteúdo vazio para o pseudo-elemento */
+    position: absolute;       /* Posicionamento absoluto em relação ao link */
+    bottom: 0;                /* Alinha o pseudo-elemento na parte inferior do link */
+    left: 0;                  /* Começa do lado esquerdo */
+    width: 0%;                /* A linha começa com 0% de largura (invisível) */
+    height: 2px;              /* Altura da linha */
+    background-color: #0099ff; /* Cor azul da linha */
+    transition: width 0.3s ease; /* Transição suave no crescimento da linha */
+}
+
+/* Faz a linha crescer até 100% ao passar o mouse */
+.menu-hover a:hover::after {
+    width: 100%;              /* A linha se expande horizontalmente sob o link */
+}
